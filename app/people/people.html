@@ -1,7 +1,7 @@
-
 <h1>People <span><a href="#/people/add">add a person</a></span></h1>
-
-<table ng-controller="PeopleController as people">
+<div .class="container" ng-controller="PeopleController as people">
+    <p ng-if="!people.peopleList[0]">There don't appear to be any people, maybe you should <span><a href="#/people/add">Add someone</a></spanspan></p>
+<table ng-if="people.peopleList[0]">
     <thead>
         <tr>
             <th>Id</th>

@@ -27,5 +27,8 @@ angular.module('hereiam.people', ['ngRoute'])
 		});
 	};
 
+    people.addPerson = function(person) {
+        person.peopleList.push(person);
+    };
 
 }]);
