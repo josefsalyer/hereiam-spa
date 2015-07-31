@@ -11,4 +11,9 @@ angular.module('hereiam.events', ['ngRoute'])
 
 .controller('EventsController', [function() {
 
+    var events = this;
+    events.eventList = [
+        {"_id": "d9dfaef4-cb1e-4d78-a231-6ccaf9386bdc", "Organizers": ["Frank Sinatra"], "Guests": ["Kimmy the Knife"]}
+    ];
+
 }]);

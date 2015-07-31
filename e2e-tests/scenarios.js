@@ -20,7 +20,7 @@ describe('hereiam app', function() {
 
         it('should render events when user navigates to /events', function() {
             expect(element.all(by.css('[ng-view] p')).first().getText()).
-            toMatch(/partial for events/);
+            toMatch(/partial for Events/);
         });
 
     });
@@ -34,20 +34,16 @@ describe('hereiam app', function() {
 
 
         it('should render people when user navigates to /people', function() {
-            expect(element.all(by.css('[ng-view] p')).first().getText()).
-            toMatch(/partial for people/);
-        });
-
-    });
-    describe('blah', function() {
-
-        beforeEach(function() {
-            browser.get('index.html#/people');
+            expect(element.all(by.css('h1')).first().getText()).
+            toMatch(/People add a person/);
         });
 
         it('should list people in a table', function() {
-            expect(element.all("tr").to().equal(8));
+            var e = element.all(by.css('tr.ng-scope')).count();
+            console.log(e);
+            expect(e).toEqual(7);
         });
+
 
     });
 });
